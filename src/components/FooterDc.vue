@@ -7,11 +7,39 @@
       </div>
     </div>
     <div class="middle-footer">
-      <img class="main-img-foot" src="../assets/img/footer-bg.jpg" alt="">
+      <div class="container">
+        <div class="col-left">
+        <div class="col_col-left">
+          <ul>
+              <li class="li-title">Dc Comics</li>
+              <li class="li-footer" v-for="(link, index) in arrDcComics" :key="index"><a :href="link.href">{{ link.text }}</a></li>
+          </ul>
+          <ul>
+              <li class="li-title">Shop</li>
+              <li class="li-footer" v-for="(link, index) in arrShop" :key="index"><a :href="link.href">{{ link.text }}</a></li>
+          </ul>
+        </div>
+        <div class="col_col-middle">
+          <ul>
+              <li class="li-title">Dc</li>
+              <li class="li-footer" v-for="(link, index) in arrDc" :key="index"><a :href="link.href">{{ link.text }}</a></li>
+          </ul>
+        </div>
+        <div class="col_col-right">
+          <ul>
+              <li class="li-title">Sites</li>
+              <li class="li-footer" v-for="(link, index) in arrSites" :key="index"><a :href="link.href">{{ link.text }}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-right">
+        <img class="img-jumbo" src="../assets/img/dc-logo-bg.png" alt="logo dc">
+      </div>
+      </div>
     </div>
     <div class="bottom-footer">
       <div class="container">
-        <div class="sign-up"><a href="#"><span class="text-sign">Sign-up now!</span></a></div>
+        <button class="sign-up"><a href="#"><span class="text-sign">Sign-up now!</span></a></button>
         <div class="social-text">Follow us</div>
         <a v-for="(element,index) in arrSocial" :key="index" class="social-img" :href="element.href">
           <img :src="element.img" :alt="element.text">
@@ -61,6 +89,114 @@ export default {
           href: '#',
           img: dcPower,
           text: 'dc power visa'
+        }
+      ],
+      arrDcComics: [
+        {
+          href: '#',
+          text: 'Characters'
+        },
+        {
+          href: '#',
+          text: 'Comics'
+        },
+        {
+          href: '#',
+          text: 'Movies'
+        },
+        {
+          href: '#',
+          text: 'Tv'
+        },
+        {
+          href: '#',
+          text: 'Games'
+        },
+        {
+          href: '#',
+          text: 'Videos'
+        },
+        {
+          href: '#',
+          text: 'News'
+        }
+      ],
+      arrShop: [
+        {
+          href: '#',
+          text: 'Shop DC'
+        },
+        {
+          href: '#',
+          text: 'Shop DC Collectibles'
+        }
+      ],
+      arrDc: [
+        {
+          href: '#',
+          text: 'Terms Of Use'
+        },
+        {
+          href: '#',
+          text: 'Privacy policy (New)'
+        },
+        {
+          href: '#',
+          text: 'Ad Choices'
+        },
+        {
+          href: '#',
+          text: 'Advertising'
+        },
+        {
+          href: '#',
+          text: 'Jobs'
+        },
+        {
+          href: '#',
+          text: 'Subscriptions'
+        },
+        {
+          href: '#',
+          text: 'Talent Workshops'
+        },
+        {
+          href: '#',
+          text: 'CPSC Certificates'
+        },
+        {
+          href: '#',
+          text: 'Ratings'
+        },
+        {
+          href: '#',
+          text: 'Shop Help'
+        },
+        {
+          href: '#',
+          text: 'Contact Us'
+        }
+      ],
+      arrSites: [
+        {
+          href: '#',
+          text: 'DC'
+        },
+        {
+          href: '#',
+          text: 'MAD Magazine'
+        },
+        {
+          href: '#',
+          text: 'DC Kids'
+        },
+        {
+          href: '#',
+          text: 'DC Univers'
+        },
+        {
+          href: '#',
+          text: 'DC Power Visa'
         }
       ],
       arrSocial: [
@@ -123,17 +259,49 @@ export default {
 }
 .middle-footer {
     width: 100%;
-    height: 350px;
-  .main-img-foot {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    background-image: url(../assets/img/footer-bg.jpg);
+    display: flex;
+    .col-left {
+      width: 50%;
+      display: flex;
+      a {
+          color: lightgrey;
+          text-decoration: none;
+          font-size: .8rem;
+        }
+        .li-title {
+          color: white;
+          text-transform: uppercase;
+          font-weight: bolder;
+          margin: 15px 0;
+        }
+        .li-footer {
+          padding: .2rem 0;
+        }
+      .col_col-left,
+      .col_col-middle,
+      .col_col-right {
+        padding: 20px 0;
+        margin-right: 3rem;
+      }
+      ul {
+        list-style: none;
+      }
+    }
+    .col-right {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      .img-jumbo {
+        width: 60%;
+      }
+    }
 }
 .bottom-footer {
   background-color: #303030;
   padding: 20px 0;
   .sign-up {
+    background-color: transparent;
     border: 3px solid $blue-color;
     padding: 10px;
     a {

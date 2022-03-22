@@ -14,7 +14,7 @@ export default {
   name: 'HeaderDc',
   data () {
     return {
-      activeIndex: null,
+      activeIndex: 0,
       links: [
         {
           href: '#',
