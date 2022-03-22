@@ -62,23 +62,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 1300px;
-    margin: 20px auto;
-    .img-logo {
-      width: 5%;
-      margin-right: auto;
-    }
-    li {
-    display: inline-block;
-    a {
-      text-decoration: none;
-      color: black;
-      padding: 1rem;
-    }
+  .img-logo {
+    width: 5%;
+    margin-right: auto;
   }
+  li {
+  display: inline-block;
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
   }
+}
 </style>
