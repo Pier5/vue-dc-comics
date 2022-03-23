@@ -10,6 +10,7 @@
           :card-img="card.thumb"
           :card-series="card.series"
         />
+        <button class="btn-main">Load more</button>
       </div>
     </div>
   </main>
@@ -116,8 +117,10 @@ main {
   .main-bottom {
     background-color: black;
     .container{
-      padding: 3rem 0;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       align-items: stretch;
       position: relative;
@@ -134,6 +137,14 @@ main {
           text-transform: uppercase;
           font-weight: bolder;
         }
+      }
+      .btn-main {
+        border: none;
+        background-color: $blue-color;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bolder;
+        padding: .8rem 2rem;
       }
     }
   }
