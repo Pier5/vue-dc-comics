@@ -5,12 +5,22 @@
         <div class="title-cards"><span class="title-text">Current series</span></div>
       </div>
     </div>
-    <div class="container">
+    <div class="main-bottom">
+      <div class="container">
+        <CardsDcNovels
+          v-for="card in arrDcCards"
+          :key="card.series"
+          :card-img="card.thumb"
+          :card-series="card.series"
+        />
+      </div>
     </div>
   </main>
 </template>
 
 <script>
+import CardsDcNovels from './CardsDcNovels.vue'
+
 export default {
   name: 'MainDc',
   data () {
@@ -90,6 +100,9 @@ export default {
         }
       ]
     }
+  },
+  components: {
+    CardsDcNovels
   }
 }
 </script>
@@ -116,6 +129,9 @@ main {
         }
       }
     }
+  }
+  .main-bottom {
+    background-color: black;
   }
 }
 </style>
