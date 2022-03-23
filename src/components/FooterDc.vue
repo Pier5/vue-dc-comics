@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="top-footer">
-      <TopFooter
+      <BlueNavList
       v-for="element in arrBuy"
       :key="element.text"
       :element-img="element.img"
@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import TopFooter from './TopFooter.vue'
+import BlueNavList from './BlueNavList.vue'
 import dcComics from '../assets/img/buy-comics-digital-comics.png'
 import dcMerch from '../assets/img/buy-comics-merchandise.png'
 import dcShop from '../assets/img/buy-comics-shop-locator.png'
@@ -232,7 +232,7 @@ export default {
     }
   },
   components: {
-    TopFooter
+    BlueNavList
   }
 }
 </script>

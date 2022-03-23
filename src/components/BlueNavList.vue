@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'TopFooter',
+  name: 'BlueNavList',
   props: {
     elementImg: String,
     elementText: String
