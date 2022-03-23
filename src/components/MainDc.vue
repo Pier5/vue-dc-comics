@@ -1,12 +1,9 @@
 <template>
   <main>
-    <div class="main-top">
-      <div class="container">
-        <div class="title-cards"><span class="title-text">Current series</span></div>
-      </div>
-    </div>
+    <div class="main-top"></div>
     <div class="main-bottom">
       <div class="container">
+        <div class="title-cards"><span class="title-text">Current series</span></div>
         <CardsDcNovels
           v-for="card in arrDcCards"
           :key="card.series"
@@ -115,23 +112,30 @@ main {
     background-image: url(../assets/img/jumbotron.jpg);
     background-size: cover;
     background-position: top;
-    .container {
+    }
+  .main-bottom {
+    background-color: black;
+    .container{
+      padding: 3rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
       position: relative;
       .title-cards {
-      background: $blue-color;
-      width: 180px;
-      padding: .8rem;
-      text-align: center;
-      .title-text {
-        color: white;
-        text-transform: uppercase;
-        font-weight: bolder;
+        background: $blue-color;
+        width: 180px;
+        padding: .8rem;
+        text-align: center;
+        position: absolute;
+        left: -5px;
+        top:  -20px;
+        .title-text {
+          color: white;
+          text-transform: uppercase;
+          font-weight: bolder;
         }
       }
     }
-  }
-  .main-bottom {
-    background-color: black;
   }
 }
 </style>
