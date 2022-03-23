@@ -40,7 +40,7 @@
     <div class="bottom-footer">
       <div class="container">
         <button class="sign-up"><a href="#"><span class="text-sign">Sign-up now!</span></a></button>
-        <div class="social-text">Follow us</div>
+        <h3 class="social-text">Follow us</h3>
         <a v-for="(element,index) in arrSocial" :key="index" class="social-img" :href="element.href">
           <img :src="element.img" :alt="element.text">
         </a>
@@ -242,7 +242,7 @@ export default {
   .cards {
     display: flex;
     align-items: center;
-    margin: 0 60px;
+    margin: 0 50px;
     .img-foot {
       width: 35px;
       margin-right: 8px;
@@ -259,7 +259,7 @@ export default {
 }
 .middle-footer {
     width: 100%;
-    height: 400px;
+    height: 380px;
     background-image: url(../assets/img/footer-bg.jpg);
     display: flex;
     overflow-y: hidden;
