@@ -259,8 +259,10 @@ export default {
 }
 .middle-footer {
     width: 100%;
+    height: 400px;
     background-image: url(../assets/img/footer-bg.jpg);
     display: flex;
+    overflow-y: hidden;
     .col-left {
       width: 50%;
       display: flex;
@@ -293,7 +295,7 @@ export default {
       display: flex;
       justify-content: flex-end;
       .img-jumbo {
-        width: 60%;
+        width: 80%;
       }
     }
 }

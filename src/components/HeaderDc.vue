@@ -85,7 +85,7 @@ li {
   a {
     text-decoration: none;
     color: black;
-    padding: 1rem;
+    padding: 2.4rem 1rem;
     text-transform: uppercase;
     font-weight: bolder;
     font-size: .8rem;
