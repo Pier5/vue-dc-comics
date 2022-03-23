@@ -12,7 +12,8 @@ export default {
   name: 'BlueNavList',
   props: {
     elementImg: String,
-    elementText: String
+    elementText: String,
+    elementHref: String
   }
 }
 </script>

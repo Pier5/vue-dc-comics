@@ -6,6 +6,7 @@
       :key="element.text"
       :element-img="element.img"
       :element-text="element.text"
+      :element-href="element.href"
     />
     </div>
     <div class="middle-footer">
